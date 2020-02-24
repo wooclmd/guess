@@ -3,11 +3,12 @@ start = input('請輸入開始值: ')
 end = input('請輸入結束值: ')
 start = int(start)
 end = int(end)
-
 r = random.randint(start, end)
 count = 0
-while True:
-	count = count + 1 
+time = 5
+while time > 0:
+	count = count + 1  # count+= 1 
+	time = time - 1 
 	num = input('請猜數字: ')
 	num = int(num)
 	if num == r:
@@ -18,4 +19,4 @@ while True:
 		print('猜錯了, 比', num, '小')
 	else:
 		print('猜錯了, 比', num, '大')
-	print('這是你猜的第', count, '次')
+	print('這是你猜的第', count, '次', '剩', time, '次機會')
